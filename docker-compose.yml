@@ -7,23 +7,23 @@ services:
   container_name: Full2020-86287
   restart: always
   environment:
-   MYSQL_DATABASE: docker_database
-   MYSQL_USER: root
-   MYSQL_PASSWORD: 
-   MYSQL_ROOT_PASSWORD: 
+   MYSQL_DATABASE: SFornal
+   MYSQL_USER: SFornal
+   MYSQL_PASSWORD: SFornal
+   MYSQL_ROOT_PASSWORD: SFornal
   ports:
    - 3306:3306
   networks:
-   second:
+   BridgeZadanie1:
       ipv4_address: 10.0.10.3
 
  java:
-  image: SimonF97/Docker_java_app
-  container_name: JavaContainer
+  image: simonf1997/docker_java_app
+  container_name: AppContainer
   depends_on:
    - mysql
   networks:
-   - second
+   - BridgeZadanie1
   stdin_open: true
   tty: true
 
@@ -32,7 +32,7 @@ volumes:
   db-data:
 
 networks:
- second:
+ BridgeZadanie1:
   driver: bridge
   ipam:
    config:

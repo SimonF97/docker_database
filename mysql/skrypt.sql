@@ -6,6 +6,6 @@ CREATE TABLE student (
   primary key(id)
     );
     
-INSERT INTO human VALUES (1,'Jan','Kowalski','123456');
-INSERT INTO human VALUES (2,'Adam','Nowak','000000');
-INSERT INTO human VALUES (3,'Krzysztof','Iksiński','135790');
+INSERT INTO student VALUES (1,'Jan','Kowalski','123456');
+INSERT INTO student VALUES (2,'Adam','Nowak','000000');
+INSERT INTO student VALUES (3,'Krzysztof','Iksinski','135790');
